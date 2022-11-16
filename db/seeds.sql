@@ -1,5 +1,5 @@
 -- seeds the database
-INSERT INTO department
+INSERT INTO department(name)
 VALUES ('Sales'),('Engineering'),('Finance'),('Legal');
 
 INSERT INTO role (title,salary,department_id)
@@ -11,5 +11,5 @@ VALUES ('sales lead',100000,1),('sales person', 80000,1),
 INSERT INTO employee(first_name,last_name,role_id,manager_id)
 VALUES('Troy', 'Doe',1,NULL),('Hunter','Chan',2,1),
 ('Eric','Brat',3,NULL),('Diego','Champ',4,3),
-('Connor','Lol',5,NULL),('Big','Nate',6,5),
+('Connor','Lol',5,NULL),('Big','Ja',6,5),
 ('Charles','Barkley',7,NULL),('Lebron','James',8,7);

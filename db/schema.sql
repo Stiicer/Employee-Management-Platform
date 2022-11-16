@@ -9,6 +9,7 @@ CREATE TABLE department(
     name VARCHAR(30) NOT NULL
 );
 -- creates role table to then join with department table at department id 
+
 CREATE TABLE role(
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 
@@ -20,7 +21,9 @@ CREATE TABLE role(
     FOREIGN KEY (department_id) 
     REFERENCES department(id) 
     ON DELETE SET NULL
+   
 );
+
 -- creates employee table to then join with role table at role id
 CREATE TABLE employee(
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -38,6 +41,7 @@ CREATE TABLE employee(
     FOREIGN KEY (manager_id) 
     REFERENCES employee(id) 
     ON DELETE SET NULL
+    
 
 );
 
