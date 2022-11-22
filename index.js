@@ -93,6 +93,7 @@ function viewEmployees(){
         });
         
 };
+
 async function addEmployee(){
     let employeeArray = [];
     let eArray = [];
@@ -143,16 +144,28 @@ async function addEmployee(){
         },
 
     ])
-    .then((a)=>{
+    .then(async (a)=>{
         const first = a.first_name;
         const last = a.last_name;
+
         const role = a.role;
-        const man = a.manager;
-        db.query('INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES(?,?,?,?)',[first,last,role,man],(err,res) =>{
-            if (err) {
-                res.status(400).json({ error: err.message });
-                return;
-              }else {console.table(res);} 
+        let r_id;
+        rArray.forEach(r => {
+                if(r.title === role){
+                r_id = parseInt(r.id);
+               
+                 }
+                })
+        const manager = a.manager
+        let m_id;
+                const man = eArray.forEach(e => {
+                    if(e.name === manager){
+                    m_id = parseInt(e.id);  
+                     }
+                    });
+                    console.log(m_id);
+        await db.query('INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES(?,?,?,?)',[first,last,r_id,man],(err,res) =>{
+           console.table(res);
             });
             options();
     })};
