@@ -153,7 +153,6 @@ async function addEmployee(){
         rArray.forEach(r => {
                 if(r.title === role){
                 r_id = parseInt(r.id);
-               
                  }
                 })
         const manager = a.manager
@@ -169,5 +168,40 @@ async function addEmployee(){
             });
             options();
     })};
+    function viewRoles(){
+        const sql= `
+        SELECT  
+           * FROM role`
+    
+            connect.query(sql, (err,res) => {
+                if (err) {
+                    
+                    return err;
+                    
+                  }else {console.table(res);}
+                  
+                  options(); 
+            });
+            
+    };
+    function viewDept(){
+        const sql= `
+        SELECT  
+           * FROM department`
+    
+            connect.query(sql, (err,res) => {
+                if (err) {
+                    
+                    return err;
+                    
+                  }else {console.table(res);}
+                  
+                  options(); 
+            });
+            
+    };
+    
+
+    
     options();
     
