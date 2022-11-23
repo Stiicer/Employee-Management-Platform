@@ -14,8 +14,7 @@ Application displays the user inputs with employee role department salary and ma
 - [License](#license)
 
 ## Installation
-
-Deployed website 
+n/a
 
 ## Usage
 
