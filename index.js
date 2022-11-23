@@ -53,14 +53,8 @@ const options = () => {
         case 'VIEW ALL ROLES':
             viewRoles();
             break;
-        case 'ADD ROLE':
-            addRole();
-            break;
         case 'VIEW ALL DEPT':
             viewDept();
-            break;
-        case 'ADD A DEPARTMENT':
-            addDept();
             break;
         case 'QUIT':
             console.log('YOU ARE SIGNED OUT.')
