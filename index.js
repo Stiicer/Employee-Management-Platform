@@ -47,9 +47,6 @@ const options = () => {
         case 'ADD EMPLOYEE':
             addEmployee();
             break;
-        case 'UPDATE EMPLOYEE ROLE':
-            updateEmployee();
-            break;
         case 'VIEW ALL ROLES':
             viewRoles();
             break;
